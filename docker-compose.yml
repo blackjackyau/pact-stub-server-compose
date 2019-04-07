@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  pact_stub:
+    image: pactfoundation/pact-stub-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./pacts:/app/pacts
+    command: --dir pacts -p 8080
